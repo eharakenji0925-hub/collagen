@@ -1086,15 +1086,15 @@ a{color:inherit;text-decoration:none}
 /* ═══════════════════════════════════════════════
    STORES
 ═══════════════════════════════════════════════ */
-.stores{background:#f8f0e8;padding:110px 60px}
+.stores{background:#f8f0e8;padding:110px 60px;overflow:visible}
 .stores-inner{max-width:1200px;margin:0 auto}
 .stores-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:20px}
 .region-label{font-family:'Josefin Sans',sans-serif;font-weight:100;font-size:9px;letter-spacing:.38em;color:var(--gold);text-transform:uppercase;margin:36px 0 14px;display:block}
-.store-rail{display:flex;gap:14px;overflow-x:auto;padding-bottom:16px;scrollbar-width:none;-ms-overflow-style:none}
-.store-rail::-webkit-scrollbar{display:none}
+.store-rail{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+
 /* ─── STORE CARDS — redesigned ─── */
 .scard{
-  flex:0 0 240px;background:#fff;overflow:hidden;
+  width:100%;background:#fff;overflow:hidden;
   border:1px solid rgba(201,169,110,.12);
   transition:transform .4s var(--ease-out-expo),box-shadow .4s;
 }
@@ -1134,10 +1134,11 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(to right,transparent,rgba(201,169,110,.3),transparent);
 }
 /* Body */
-.scard-body{padding:16px 18px}
+.scard-body{padding:16px 14px;position:relative;overflow:visible}
 .scard-name{
   font-family:'Noto Serif JP',serif;font-weight:300;
-  font-size:13px;color:var(--dark2);margin-bottom:6px;letter-spacing:.04em;line-height:1.5;
+  font-size:12px;color:var(--dark2);margin-bottom:6px;letter-spacing:.03em;line-height:1.6;
+  overflow:visible;white-space:normal;word-break:break-word;
 }
 .scard-addr{
   font-family:'Noto Serif JP',serif;font-weight:200;
